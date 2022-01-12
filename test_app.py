@@ -1,4 +1,4 @@
 from app import tosec
 
 def test_sec():
-    assert tosec('1.0') == 3600
+    assert tosec(2) == 4

@@ -3,12 +3,7 @@ from flask import jsonify
 app = Flask(__name__)
 
 def tosec(t):
-    hr=int(t.split('.')[0])
-    min=int(t.split('.')[1])
-    # sec=int(t.split(':')[2])
-    hr=hr*3600
-    min=min*60
-    sec=hr+min
+    sec=t**2
     return sec
 
 
@@ -21,7 +16,7 @@ def hello():
 @app.route('/sec/<t>')
 def changesec(t):
     result =tosec(t)
-    return jasonify(result)
+    return jsonify(result)
 
 
 if __name__ == '__main__':
