@@ -3,12 +3,12 @@ from flask import jsonify
 app = Flask(__name__)
 
 def tosec(t):
-    hr=int(t.split(':')[0])
-    min=int(t.split(':')[1])
-    sec=int(t.split(':')[2])
+    hr=int(t.split('.')[0])
+    min=int(t.split('.')[1])
+    # sec=int(t.split(':')[2])
     hr=hr*3600
     min=min*60
-    sec=hr+min+sec
+    sec=hr+min
     return sec
 
 
