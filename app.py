@@ -21,7 +21,7 @@ def hello():
 @app.route('/sec/<t>')
 def changesec(t):
     result =tosec(t)
-    return result
+    return jasonify(result)
 
 
 if __name__ == '__main__':
