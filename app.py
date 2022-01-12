@@ -18,7 +18,7 @@ def hello():
     print("I am inside hello world")
     return 'Hello World! I can make change at route: /sec'
 
-@app.route('/sec/t')
+@app.route('/sec/<t>')
 def changesec(t):
     result =tosec(t)
     return result
