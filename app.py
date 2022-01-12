@@ -3,7 +3,7 @@ from flask import jsonify
 app = Flask(__name__)
 
 def tosec(t):
-    sec=t**2
+    sec=t*2
     return sec
 
 
